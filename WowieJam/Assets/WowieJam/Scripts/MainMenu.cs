@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour, ISelectHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public void PlayGame()
+
+  public GameObject notSelected;
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+      notSelected.SetActive(false);
     }
 
-    public void QuitGame()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        // Build Version
-        Application.Quit();
+      notSelected.SetActive(true);
+    }
 
-        // WebGL version
-        Application.OpenURL("www.google.com");
+    public void OnSelect(BaseEventData eventData)
+    {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

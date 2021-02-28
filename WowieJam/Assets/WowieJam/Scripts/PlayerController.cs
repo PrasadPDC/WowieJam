@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-       
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame

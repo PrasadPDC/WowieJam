@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
         audios = GameObject.FindObjectOfType<AudioManager>();
         audios.Play("InGameSound");
         gameover = false;
-        Time.timeScale = 1f;
         restartPanel.SetActive(false);
     }
     private void Update()
@@ -22,18 +21,19 @@ public class GameManager : MonoBehaviour
         if(gameover == true)
         {
             restartPanel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     public void EndGame()
     {
+       
         // Change this to Go to Main Menu or somewhere
-        Invoke("Restart", RestartDelay);
-
+        Restart();
+        Time.timeScale = 1f;
     }
 
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 0f;
     }
 }

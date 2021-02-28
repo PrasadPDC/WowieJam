@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public GameObject player;
+    public Vector3 playerpos;
     public GameObject Car;   
     public float timeInterval= 1f;
     public float timebetnspawn;
 
-    public Transform[] SpawnPositon;
+    public Transform[] SpawnPositon1;
+    public Transform[] SpawnPositon2;
     // Start is called before the first frame update
     void Start()
     {        
-        //SpawnPositon = GameObject.FindGameObjectsWithTag("SpawnPosition"); 
+      
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        timebetnspawn += 1;
+        transform.position = new Vector3(playerpos.x, playerpos.y, player.transform.position.z + playerpos.z);
+        timebetnspawn += Time.deltaTime;
         if (timebetnspawn >= timeInterval)
         {
-            Instantiate(Car, SpawnPositon[Random.Range(0, SpawnPositon.Length)]);
+            Instantiate(Car, SpawnPositon1[Random.Range(0, SpawnPositon1.Length)]);
+            Instantiate(Car, SpawnPositon2[Random.Range(0, SpawnPositon2.Length)]);
             timebetnspawn = 0;
         }
      

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnPosition
   - Obstacle
+  - collider
   layers:
   - Default
   - TransparentFX

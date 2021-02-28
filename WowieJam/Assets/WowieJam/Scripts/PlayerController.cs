@@ -7,11 +7,12 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     Vector3 move;
     [SerializeField] private float MoveSpeed;
-
+  
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+       
     }
 
     // Update is called once per frame
@@ -24,11 +25,6 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(transform.position + move * MoveSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Obstacle"))
-        {
-            Destroy(other.gameObject);
-        }
-    }
+  
+   
 }

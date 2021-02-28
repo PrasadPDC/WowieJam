@@ -18,9 +18,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         move.x = Input.GetAxis("Horizontal"); 
-        move.y = Input.GetAxis("Vertical");
-        move = (transform.right * move.x + transform.forward * move.y);
+        //move.y = Input.GetAxis("Vertical");
+        move = (transform.right * move.x + transform.forward );
 
         rb.MovePosition(transform.position + move * MoveSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -7,6 +7,7 @@ public class ObstacleMove : MonoBehaviour
     Rigidbody rb;
     [SerializeField] float speed;
     private GameManager gamemanager;
+    private AudioManager audios;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +25,13 @@ public class ObstacleMove : MonoBehaviour
         if (other.CompareTag("collider"))
         {
             Destroy(gameObject);
+
         }
         if (other.CompareTag("Player"))
         {
             gamemanager.gameover = true;
+            audios = GameObject.FindObjectOfType<AudioManager>();
+            audios.Play("LooseSound");
         }
     }
 }

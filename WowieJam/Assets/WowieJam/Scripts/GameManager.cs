@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public GameObject restartPanel;
     [HideInInspector]public bool gameover;
     public float RestartDelay = 1f;
-
+    private AudioManager audios;
     private void Start()
     {
+        audios = GameObject.FindObjectOfType<AudioManager>();
+        audios.Play("InGameSound");
         gameover = false;
         Time.timeScale = 1f;
         restartPanel.SetActive(false);

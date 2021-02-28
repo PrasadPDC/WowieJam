@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject player;
     public Vector3 playerpos;
-    public GameObject Car;   
+    public GameObject[] Car;   
     public float timeInterval= 1f;
     public float timebetnspawn;
 
@@ -25,8 +25,8 @@ public class Spawner : MonoBehaviour
         timebetnspawn += Time.deltaTime;
         if (timebetnspawn >= timeInterval)
         {
-            Instantiate(Car, SpawnPositon1[Random.Range(0, SpawnPositon1.Length)]);
-            Instantiate(Car, SpawnPositon2[Random.Range(0, SpawnPositon2.Length)]);
+            Instantiate(Car[Random.Range(0,Car.Length)], SpawnPositon1[Random.Range(0, SpawnPositon1.Length)]);
+            Instantiate(Car[Random.Range(0, Car.Length)], SpawnPositon2[Random.Range(0, SpawnPositon2.Length)]);
             timebetnspawn = 0;
         }
      

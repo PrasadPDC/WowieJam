@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &-1833749242976945914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375827092473431389}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &-1232247621105164852
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375827092473431389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3.362737
+  m_Height: 12.921241
+  m_Direction: 1
+  m_Center: {x: 2.0535958, y: -4.202025, z: 7.348286}
+--- !u!114 &666109244865609929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375827092473431389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50071d9b7fef8af4cb1bb100b0275836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2000
 --- !u!1001 &717863918509619212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14,18 +57,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.3032072
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.3032072
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: -0.11600655
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7815285
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5205868
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.641968
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1bad4b9f976d25243afc1a22dd233564,
         type: 3}
@@ -80,7 +138,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1bad4b9f976d25243afc1a22dd233564,
         type: 3}
       propertyPath: m_Name
-      value: shortcar
+      value: shortcar Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bad4b9f976d25243afc1a22dd233564,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bad4b9f976d25243afc1a22dd233564, type: 3}
+--- !u!1 &375827092473431389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bad4b9f976d25243afc1a22dd233564,
+    type: 3}
+  m_PrefabInstance: {fileID: 717863918509619212}
+  m_PrefabAsset: {fileID: 0}

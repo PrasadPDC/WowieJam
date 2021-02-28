@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/WowieJam/Scenes/MainMenu.unity
+    guid: 3a890f7a4b06b604f96defd59685bf24
+  - enabled: 1
+    path: Assets/WowieJam/Scenes/Wowiejam.unity
+    guid: 9c0a0efd29c27454994186b47e550b18
   m_configObjects: {}

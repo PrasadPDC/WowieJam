@@ -12,12 +12,12 @@ public class Button : MonoBehaviour, ISelectHandler, IPointerEnterHandler, IPoin
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-      notSelected.SetActive(false);
+       notSelected.SetActive(false);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-      notSelected.SetActive(true);
+       notSelected.SetActive(true);
     }
 
     public void OnSelect(BaseEventData eventData)

@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         {
             audios.Play("Win");
             Invoke("waitime", 0.2f);
-            GetComponent<BoxCollider>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
         }
 
     }
